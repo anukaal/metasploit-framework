@@ -86,7 +86,8 @@ RSpec.describe Mdm::Workspace, type: :model do
           allow(Rex::Socket::RangeWalker).to receive(:new).with(ip_or_range).and_raise(StandardError)
         end
 
-        it { is_expected.to raise_error(StandardError) }
+
+        it { expect(workspace).to raise_error(StandardError) }
       end
 
       context 'without exception from Rex::Socket::RangeWalker' do
