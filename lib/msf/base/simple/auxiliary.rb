@@ -115,8 +115,8 @@ module Auxiliary
 
     mod.setup
 
-    # Run check if it exists
-    mod.respond_to?(:check) ? mod.check : Msf::Exploit::CheckCode::Unsupported
+      # Run check if it exists
+    mod.has_check? ? mod.check : Msf::Exploit::CheckCode::Unsupported
   end
 
   #
