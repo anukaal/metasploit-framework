@@ -88,7 +88,7 @@ Gem::Specification.new do |spec|
   # Used by the Metasploit data model, etc.
   # bound to 0.2x for Activerecord 4.2.8 deprecation warnings:
   # https://github.com/ged/ruby-pg/commit/c90ac644e861857ae75638eb6954b1cb49617090
-  spec.add_runtime_dependency 'pg', '~> 0.20'
+  spec.add_runtime_dependency 'pg'
   # Run initializers for metasploit-concern, metasploit-credential, metasploit_data_models Rails::Engines
   spec.add_runtime_dependency 'railties'
   # required for OS fingerprinting

@@ -180,6 +180,7 @@ module Msf::DBManager::Vuln
     # Try to match based on vuln_details records
     if not vuln and opts[:details_match]
       if service
+        # find_vuln_by_details is called once and service cannot be `nil` why have the extra logic?
         vuln = find_vuln_by_details(opts[:details_match], host, service)
         if vuln and not vuln.service
           vuln.service = service
